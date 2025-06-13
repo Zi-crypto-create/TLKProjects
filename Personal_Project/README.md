@@ -1,37 +1,25 @@
-Description \
-This is a simple console-based To-Do List App written in Python. It allows users to:
-- Add tasks
+# To-Do List App
+
+A simple command-line To-Do List application that helps users manage their tasks. Users can add, delete, and view tasks interactively from the terminal.
+
+## Features
+
+- Add new tasks
+- Delete existing tasks by task number
 - View current tasks
-- Delete tasks
-- Exit the program
+- Looping menu interface for continuous task management
 
-It's designed for beginner programmers using only core Python concepts like variables, lists, loops, conditionals, and functions.
+## How It Works
 
-Concepts Used \
-- Variables: to store data like task names and user input
-- Lists: to store multiple tasks
-- While Loops: to repeat the menu until the user quits
-- If/Elif/Else Statements: to make decisions based on the user's input
-- Functions: to organize code into reusable sections
-- Try/Except: to catch errors if the user inputs something invalid
-- Print & Input: for user interaction
-- \n: for better formatting in the terminal
+- The app maintains a list of tasks using a Python list.
+- Users interact through a menu that runs in a loop until they choose to quit.
+- Task actions are handled by dedicated functions:
+  - `addTask()` – Adds a new task to the list.
+  - `listTasks()` – Displays all current tasks with their task numbers.
+  - `deleteTask()` – Deletes a task based on the number provided by the user.
 
-How to Run\
-- Make sure Python is installed (version 3+).
-- Open the code in PyCharm or any Python editor.
-- Run the file. 
-- Use the number menu to interact with the program.
+## Getting Started
 
-
-Features\
-- Add task: lets the user enter and store a new task
-- Delete task: lets the user remove a task by its number
-- List tasks: displays all tasks with their numbers
-- Keeps running until the user chooses to quit
-- Known Issues
-
-Tasks are not saved after you close the app (no file storage)
-
-Input must be a number when deleting tasks or an error may occur
-
+1. Ensure you have Python installed (Python 3.x).
+2. Save the code in a file named `todo_list.py`.
+3. Run the script from the terminal:

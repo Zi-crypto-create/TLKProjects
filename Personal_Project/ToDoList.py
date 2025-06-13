@@ -34,7 +34,7 @@ def deleteTask():
     except:
         print("Invalid input.")
 
-# ✅ Only ONE loop
+#Loop
 print("Welcome to the To-Do List App!")
 
 while True:
