@@ -17,9 +17,3 @@ A simple command-line To-Do List application that helps users manage their tasks
   - `addTask()` – Adds a new task to the list.
   - `listTasks()` – Displays all current tasks with their task numbers.
   - `deleteTask()` – Deletes a task based on the number provided by the user.
-
-## Getting Started
-
-1. Ensure you have Python installed (Python 3.x).
-2. Save the code in a file named `todo_list.py`.
-3. Run the script from the terminal:

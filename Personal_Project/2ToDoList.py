@@ -3,38 +3,38 @@
 # Purpose:     To-Do List App where users can add, complete, and delete tasks. A simple way to stay organized.
 # Author:      ZI
 # Created:     13-May-2025
-# Updated:     12-June-2025
+# Updated:     16-June-2025
 #-----------------------------------------------------------------------------
 
 # Create a list to store tasks
 tasks = []
 
-def addTask():
+def addTask(task_list):
     task = input("Please enter a task: ")
-    tasks.append(task)
+    task_list.append(task)
     print(f"\n'{task}' has been added to the list.")
 
-def listTasks():
-    if not tasks:
+def listTasks(task_list):
+    if not task_list:
         print("\nThere are no tasks currently.")
     else:
         print("Current Tasks:")
-        for index, task in enumerate(tasks):
+        for index, task in enumerate(task_list, start=1):
             print(f"Task #{index}: {task}")
 
-def deleteTask():
-    listTasks()
+def deleteTask(task_list):
+    listTasks(task_list)
     try:
-        taskToDelete = int(input("Please enter the task # to delete: "))
-        if taskToDelete >= 0 and taskToDelete < len(tasks):
-            removed = tasks.pop(taskToDelete)
+        taskToDelete = int(input("Please enter the task # to delete: ")) - 1
+        if taskToDelete >= 0 and taskToDelete < len(task_list):
+            removed = task_list.pop(taskToDelete)
             print(f"\n'{removed}' has been removed.")
         else:
-            print(f"\nTask #{taskToDelete} was not found.")
+            print(f"\nThat task number was not found.")
     except:
         print("Invalid input.")
 
-#Loop
+# Loop
 print("Welcome to the To-Do List App!")
 
 while True:
@@ -47,11 +47,11 @@ while True:
 
     choice = input("Please enter your choice: ")
     if choice == "1":
-        addTask()
+        addTask(tasks)
     elif choice == "2":
-        deleteTask()
+        deleteTask(tasks)
     elif choice == "3":
-        listTasks()
+        listTasks(tasks)
     elif choice == "4":
         print("Exiting... Goodbye!")
         break
