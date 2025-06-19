@@ -9,6 +9,7 @@
 # Create a list to store tasks
 tasks = []
 
+# Using function to add a task (using a parameter)
 def addTask(task_list):
     task = input("Please enter a task: ")
     task_list.append(task)
